@@ -1,0 +1,32 @@
+{
+  "name": "codeload-github",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Download source code from a GitHub repository",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codezephy/codeload-github.git"
+  },
+  "keywords": [
+    "download-github-code"
+  ],
+  "author": "anachitheu.k@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codezephy/codeload-github/issues"
+  },
+  "homepage": "https://github.com/codezephy/codeload-github#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.9"
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2
+  }
+}
