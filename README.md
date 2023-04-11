@@ -2,7 +2,7 @@
 
 This utility allows you to easily download source code from public or private GitHub repositories using a URL
 
-Example: https://codezephy.vercel.app/codeload/github/codezephy/example/branch?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
+Example: https://codezephy.vercel.app/codeload/github/AnechaS/nodejs-docker-example
 
 
 ## Download a repository from GitHub
