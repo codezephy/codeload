@@ -1,4 +1,4 @@
-# Codeload GitHub
+# Codeload
 
 This utility allows you to easily download source code from public or private GitHub repositories using a URL
 
