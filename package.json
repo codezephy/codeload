@@ -1,5 +1,5 @@
 {
-  "name": "codeload-github",
+  "name": "codeload",
   "private": true,
   "version": "1.0.0",
   "description": "Download source code from a GitHub repository",
@@ -9,17 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codezephy/codeload-github.git"
+    "url": "git+https://github.com/codezephy/codeload.git"
   },
   "keywords": [
-    "download-github-code"
+    "download-repo-from-github"
   ],
   "author": "anachitheu.k@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/codezephy/codeload-github/issues"
+    "url": "https://github.com/codezephy/codeload/issues"
   },
-  "homepage": "https://github.com/codezephy/codeload-github#readme",
+  "homepage": "https://github.com/codezephy/codeload#readme",
   "dependencies": {
     "express": "^4.18.2",
     "node-fetch": "^2.6.9"
