@@ -2,10 +2,9 @@ const express = require('express');
 const fetch = require('node-fetch');
 
 const port = +process.env.PORT || 3000;
-
 const app = express();
 
-app.get('/:owner/:repo/:branch?', async (req, res) => {
+app.get('/github/:owner/:repo/:branch?', async (req, res) => {
   const { owner, repo, branch = '' } = req.params;
   const { token } = req.query;
 
@@ -20,18 +19,22 @@ app.get('/:owner/:repo/:branch?', async (req, res) => {
     }),
   };
   const response = await fetch(url, options).catch(() => undefined);
-  if (response?.status === 302) {
-    res.redirect(response.headers.get('location'));
+  if (response?.status !== 302) {
+    res.send('400: Invalid request');
     return;
   }
 
-  res.send('400: Invalid request');
+  res.redirect(response.headers.get('location'));
 });
 
 app.use((req, res) => {
   res.send('404: Not Found');
 });
 
-app.listen(port, () => {
-  console.log('Listening on port %i', port);
-});
+if (require.main === module) {
+  app.listen(port, () => {
+    console.log('Listening on port %i', port);
+  });
+}
+
+module.exports = app;
